@@ -8,7 +8,7 @@
 
         If byData(0) = 102 AndAlso byData(1) = 102 Then
 
-           TargetTemp = Convert.ToDecimal(Convert.ToInt16(Hex(byData(4)) & Hex(byData(5)), 16) / 100)
+            TargetTemp = Convert.ToDecimal(Convert.ToInt16(Hex(byData(4)) & Hex(byData(5)), 16) / 100)
             AmbientTemp = Convert.ToDecimal(Convert.ToInt16(Hex(byData(6)) & Hex(byData(7)), 16) / 100)
 
             Debug.WriteLine("Target Temp: " & TargetTemp & " | Ambient Temp: " & AmbientTemp)
