@@ -1,5 +1,7 @@
 # CJMCU-MLX90614
 
+![Image of Yaktocat](/sku_442784_1.jpg)
+
 This little interface board is available on places like DealExtreme and BangGood, it appears to contain a Melexis MLX90614 non-contact IR thermometer and a small micro controller. By default the unit outputs TTL level serial data at 115200 baud and the data as per the output by default appears to contain the target temperature and the ambient temperature in four bytes of 16 bit data. This small bit of Visual Basic should help you decode the data and turn it into a readable format for use in your projects, please consider that you may wish to have some additional error checking in the returned data to ensure that you are indeed reading a temperature and not any of the other data. The data format I have found so far is;
 
 Byte Number | Data Type
