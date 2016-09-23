@@ -6,8 +6,6 @@
 
         SerialPort1.Read(byData, 0, SerialPort1.BytesToRead)
 
-        Debug.WriteLine(byData(2))
-
         If byData(0) = 102 AndAlso byData(1) = 102 Then
 
            TargetTemp = Convert.ToDecimal(Convert.ToInt16(Hex(byData(4)) & Hex(byData(5)), 16) / 100)
