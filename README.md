@@ -16,4 +16,22 @@ Byte Number | Data Type
 8 | Ambient Temp Low Byte
 9 | Data Parity Bit (appears to be 0)
 
-The Visual Basic file on this project should hopefully give you an idea about how you can deal with the data in the unit directly into your serial ports (with appropriate level conversion).
+The Visual Basic file on this project should hopefully give you an idea about how you can deal with the data in the unit directly into your serial ports (with appropriate level conversion) and read the values. The unit apparently supports sending data to change the baud rate and/or the sending method (either continuous or on request data output). The format according to several websites is the following bytes, this is as of yet untested;
+
+Byte Number | Data Type
+------------ | -------------
+1 | Frame Header (102)
+2 | Frame Header (102)
+3 | Set To 02
+4 | Set To 56
+
+The above will change the output to be on demand rather than continuous.
+
+Byte Number | Data Type
+------------ | -------------
+1 | Frame Header (102)
+2 | Frame Header (102)
+3 | Set To 11 to change to 9600, 12 to set it to 57600
+4 | Set To 56
+
+The above methods change the baud rate.
